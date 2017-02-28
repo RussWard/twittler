@@ -1,0 +1,31 @@
+button {
+	
+}
+
+.more {
+	font-size: 24px;
+	color: green;
+	display: block;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 960px;
+}
+
+
+.user {
+	display: inline;
+	float: left;
+}
+
+.user:hover {
+	color: blue;
+}
+
+.text {
+	display: inline;
+}
+
+.hide {
+	display: none;
+}
