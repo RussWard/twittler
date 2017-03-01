@@ -1,7 +1,13 @@
-button {
-	
+body {
+	font-size: 18px;
+	padding-left: 30px;
+  padding-right: 30px;
+  background-color: #b6b5de;
 }
 
+button {
+	background-color: #00ffdc;
+}
 .more {
 	font-size: 24px;
 	color: green;
@@ -24,8 +30,4 @@ button {
 
 .text {
 	display: inline;
-}
-
-.hide {
-	display: none;
 }

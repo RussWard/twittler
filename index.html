@@ -25,7 +25,7 @@
           $tweet.appendTo($body);
           index -= 1;
         }
-        $('button.more').on('click', function() {
+        $('body').on('click','button.more', function() {
           var tweet = streams.home[streams.home.length -1];
           var $tweet = $("<div class='tweet'></div>");
           var $text = $("<p class='text'></p>");
@@ -36,7 +36,7 @@
           $tweet.appendTo($body);
           $(this).parent().children('div').first().remove();
         });
-        $('.user').on('click', function() {
+        $('body').on('click', 'a.user', function() {
           $('.allTweets').remove();
           var allTweets = streams.users[$(this).text().slice(1)];
           var allTweetsText = '';
@@ -45,7 +45,7 @@
           });
           var $allTweets = $("<div class='allTweets'><button class='hideThis'>Hide Tweets</button>" + allTweetsText + "</div>");
           $(this).parent().after($allTweets);
-          $('.hideThis').on('click', function() {
+          $('.allTweets').on('click','.hideThis', function() {
             $(this).parent().remove();
         });
 
