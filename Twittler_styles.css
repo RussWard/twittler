@@ -1,21 +1,45 @@
+header {
+	margin-top: 10px;
+  padding: 10px, 5px;
+	border: 10px, 5px;
+}
+
+header h1 {
+	text-align: center;
+	text-shadow: 10px, 15px, red;
+	padding-top: 10px;
+	font size: 32px;
+}
+
+header h3 {
+	text-align: center;
+}
+
+header p {
+	text-align: center;
+	font-style: italic;
+	font-weight: bolder;
+}
+
 body {
 	font-size: 18px;
 	padding-left: 30px;
   padding-right: 30px;
-  background-color: #b6b5de;
+  background: radial-gradient(720px circle, #a6bfba, #71b5e6);
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button {
-	background-color: #00ffdc;
+	background-color: #9e9e9e;
 }
 .more {
 	font-size: 24px;
-	color: green;
+	color: #000000;
 	display: block;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
-  width: 960px;
+  width: 250px;
 }
 
 
@@ -30,4 +54,5 @@ button {
 
 .text {
 	display: inline;
+	te
 }

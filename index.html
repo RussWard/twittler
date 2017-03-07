@@ -6,19 +6,24 @@
     <link href="Twittler_styles.css" rel='stylesheet'></script>
   </head>
   <body>
+    
     <script>
 
       $(document).ready(function(){
         var $body = $('body');
         $body.html("");
+        $("<header class='header'><h1>Welcome to Twittler!</h1><header>").appendTo($body);
+        $("<h3>The most inane use of the english language since the last installment of the Twilight Saga</h3>").appendTo($('.header'));
+        $("<p>Unleash the awesome power of language to randomly produce phrases that are semantically correct and yet completely and utterly meaningless... Done reading the tweets on the page?  No Problem!  Just hit the 'Gimme More!' button to generate a brand new tweet!  The future is now! no no, wait... NOW!</p>").appendTo($('.header'));
         $("<button class='more'>Gimme More!</button>").appendTo($body);
+  
         
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $("<div class='tweet'></div>");
           var $text = $("<p class='text'></p>");
-          var $user = $("<a class='user'>@" + tweet.user + "</a>");
+          var $user = $("<b class='user'>@" + tweet.user + "</b>");
           $text.text(': ' + tweet.message + ' Tweeted at:' + tweet.created_at);
           $user.appendTo($tweet);
           $text.appendTo($tweet);
@@ -29,14 +34,14 @@
           var tweet = streams.home[streams.home.length -1];
           var $tweet = $("<div class='tweet'></div>");
           var $text = $("<p class='text'></p>");
-          var $user = $("<a class='user'>@" + tweet.user + "</a>");
+          var $user = $("<b class='user'>@" + tweet.user + "</b>");
           $text.text(': ' + tweet.message + ' Tweeted at:' + tweet.created_at);
           $user.appendTo($tweet);
           $text.appendTo($tweet);
           $tweet.appendTo($body);
           $(this).parent().children('div').first().remove();
         });
-        $('body').on('click', 'a.user', function() {
+        $('body').on('click', 'b.user', function() {
           $('.allTweets').remove();
           var allTweets = streams.users[$(this).text().slice(1)];
           var allTweetsText = '';
